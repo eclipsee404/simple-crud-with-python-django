@@ -1,0 +1,33 @@
+<table class="table table-sm table-striped table-bordered">
+  <thead class="alert-success">
+    <tr>
+      <th>Nama Depan</th>
+      <th>Nama Belakang</th>
+      <th>Kelas</th>
+      <th>Aksi</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for siswa in siswa %}
+    <tr>
+      <td>{{ siswa.nama_depan }}</td>
+      <td>{{ siswa.nama_belakang }}</td>
+      <td>{{ siswa.nama_kelas }}</td>
+      <td>
+        <a
+          href="#"
+          class="btn btn-sm btn-warning edit_siswa"
+          name="{{ siswa.id }}"
+          >Edit</a
+        >
+        <a
+          href="#"
+          class="btn btn-sm btn-danger delete_siswa"
+          name="{{ siswa.id }}"
+          >Delete</a
+        >
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
